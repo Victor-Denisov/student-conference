@@ -5,63 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Conference 2025</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900 font-sans">
+<body class="bg-gray-50 text-gray-800">
 
-  <!-- Header -->
-  <header class="bg-blue-700 text-white py-6 px-4 shadow-md">
-    <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl font-bold mb-2">Student Conference 2025</h1>
-      <p class="text-lg">Empowering Tomorrow's Leaders</p>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-700">StudentConf 2025</h1>
+      <div class="space-x-4 hidden md:block">
+        <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+        <a href="#schedule" class="text-gray-700 hover:text-blue-600">Schedule</a>
+        <a href="#register" class="text-gray-700 hover:text-blue-600">Register</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+      </div>
     </div>
-  </header>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-20 text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Student Conference 2025</h2>
+      <p class="text-lg md:text-xl">Empowering Tomorrow's Leaders with Innovation, Passion, and Purpose</p>
+      <a href="#register" class="inline-block mt-6 bg-white text-blue-700 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">Register Now</a>
+    </div>
+  </section>
 
   <!-- Main Content -->
-  <main class="max-w-4xl mx-auto px-4 py-8 space-y-10">
+  <main class="max-w-5xl mx-auto px-4 py-12 space-y-16">
 
     <!-- About Section -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-2">About the Conference</h2>
-      <p class="text-gray-700">
-        The Student Conference 2025 brings together young minds to explore leadership, innovation, and education. Open to high school students across the region.
+    <section id="about">
+      <h3 class="text-3xl font-bold mb-4">About the Conference</h3>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        StudentConf 2025 brings together high school students from across the region to connect, grow, and lead.
+        Through keynote talks, workshops, and panels, students explore themes of leadership, creativity, and real-world impact.
       </p>
     </section>
 
     <!-- Schedule Section -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-2">Schedule</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-1">
-        <li><strong>10:00 AM</strong> – Opening Ceremony</li>
-        <li><strong>11:00 AM</strong> – Keynote Speaker: Dr. Lisa Chang</li>
-        <li><strong>12:30 PM</strong> – Lunch Break</li>
-        <li><strong>2:00 PM</strong> – Breakout Workshops</li>
-        <li><strong>4:00 PM</strong> – Closing Remarks</li>
-      </ul>
+    <section id="schedule">
+      <h3 class="text-3xl font-bold mb-6">Schedule</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">10:00 AM – Opening Ceremony</h4>
+          <p class="text-gray-600">Welcome address and intro to the conference goals</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">11:00 AM – Keynote: Dr. Lisa Chang</h4>
+          <p class="text-gray-600">Inspiring the next generation of innovators</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">12:30 PM – Lunch Break</h4>
+          <p class="text-gray-600">Free catered lunch and networking time</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">2:00 PM – Breakout Workshops</h4>
+          <p class="text-gray-600">Choose from career panels, leadership training, or creativity labs</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">4:00 PM – Closing Remarks</h4>
+          <p class="text-gray-600">Conference recap and certificate distribution</p>
+        </div>
+      </div>
     </section>
 
     <!-- Registration Section -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-2">Register</h2>
-      <p>
-        Please register by filling out the form below:
-      </p>
-      <a href="https://forms.gle/your-google-form-link" target="_blank" class="inline-block mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-        Register Now
+    <section id="register" class="text-center">
+      <h3 class="text-3xl font-bold mb-4">Register Now</h3>
+      <p class="mb-6 text-gray-700">Spots are limited! Register early to guarantee your place.</p>
+      <a href="https://forms.gle/your-google-form-link" target="_blank"
+         class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition text-lg">
+        Fill Out the Form
       </a>
     </section>
 
     <!-- Contact Section -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-2">Contact</h2>
-      <p>If you have any questions, reach out to us at:</p>
-      <p class="mt-1 font-medium">studentconf2025@example.com</p>
+    <section id="contact" class="text-center">
+      <h3 class="text-3xl font-bold mb-2">Contact</h3>
+      <p class="text-gray-700">Questions? Reach out to us at:</p>
+      <p class="font-medium mt-1">studentconf2025@example.com</p>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 text-center text-sm text-gray-600 py-4 mt-10">
-    &copy; 2025 Student Conference. All rights reserved.
+  <footer class="bg-white border-t text-center py-6 text-sm text-gray-500">
+    © 2025 StudentConf. All rights reserved.
   </footer>
 
 </body>
