@@ -6,7 +6,7 @@ A modern, responsive website for the Student Conference 2025, built using HTML a
 
 ## 🚀 Live Demo
 
-👉 [View the site here](https://victor-denisov.github.io/student-conference/)
+👉 [View the site here](youthgrapevine.com)
 
 ## ✨ Features
 
