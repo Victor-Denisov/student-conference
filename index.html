@@ -9,115 +9,92 @@
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
-    body { font-family: 'Poppins', sans-serif; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      /* Prevent any horizontal scrolling */
+      overflow-x: hidden;
+    }
+
+    /* Desktop hero positions (vw + vw offsets) */
+    .char-1 { width:10vw; bottom:-1vw; left:32vw; }
+    .char-2 { width:15vw; bottom: 0;   left:42vw; }
+    .char-3 { width:10vw; bottom: 0;   left:60vw; }
+    .char-4 { width: 9vw; bottom:-10.7vw; left:74vw; }
+    .char-5 { width:10vw; bottom:-1.1vw; left:85vw; }
+
+    /* Mobile tweaks: fixed pixel sizes & positions */
+    @media (max-width: 640px) {
+      .char-1 { width:  60px; bottom: -10px; left:  20px; }
+      .char-2 { width:  80px; bottom: -10px; left: 100px; }
+      .char-3 { width:  60px; bottom: -10px; left: 180px; }
+      .char-4 { width:  80px; bottom: -10px; left: 260px; }
+      .char-5 { width:  60px; bottom: -10px; left: 340px; }
+    }
   </style>
 </head>
 <body class="antialiased bg-green-50 text-green-900">
 
   <!-- Hero Section -->
-<header
-  id="hero"
-  class="relative w-full h-screen overflow-visible"
->
-  <!-- 1) full-screen bg image + dark overlay -->
-  <img
-    src="/assets/hero-bg.svg"
-    alt="Hero background"
-    class="absolute inset-0 w-full h-full object-cover"
-  />
-  <div class="absolute inset-0 bg-black opacity-20"></div>
+  <header id="hero" class="relative w-full h-screen overflow-visible">
+    <!-- full-screen bg + overlay -->
+    <img src="/assets/hero-bg.svg"
+         alt="Hero background"
+         class="absolute inset-0 w-full h-full object-cover"/>
+    <div class="absolute inset-0 bg-black opacity-20"></div>
 
-  <!-- 2) nav at the top -->
-  <nav class="relative z-10 container mx-auto flex items-center justify-between px-4 py-6">
-    <img src="/assets/logo.svg" alt="Grapevine Conference Logo" class="h-8"/>
-    <ul class="flex space-x-6 text-white uppercase tracking-wide text-sm">
-      <li><a href="#about" class="hover:underline">About</a></li>
-      <li><a href="#program" class="hover:underline">Program</a></li>
-      <li><a href="#register" class="hover:underline">Register</a></li>
-      <li><a href="#sponsors" class="hover:underline">Sponsors</a></li>
-      <li><a href="#contact" class="hover:underline">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- nav -->
+    <nav class="relative z-10 container mx-auto flex items-center justify-between px-4 py-6">
+      <img src="/assets/logo.svg" alt="Logo" class="h-8"/>
+      <ul class="flex space-x-6 text-white uppercase tracking-wide text-sm">
+        <li><a href="#about" class="hover:underline">About</a></li>
+        <li><a href="#program" class="hover:underline">Program</a></li>
+        <li><a href="#register" class="hover:underline">Register</a></li>
+        <li><a href="#sponsors" class="hover:underline">Sponsors</a></li>
+        <li><a href="#contact" class="hover:underline">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- 3) centered text, left-aligned -->
-  <div
-    class="absolute z-10 max-w-lg text-left"
-    style="left:4%; top:50%; transform: translateY(-50%);"
-  >
-    <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
-      Explore Career Possibilities
-    </h2>
-    <p class="uppercase tracking-widest text-white mb-6">
-      Your Tomorrow, Today
-    </p>
-    <p class="text-lg leading-relaxed text-white mb-8">
-      Grapevine Career Conference connects the expertise of modern leaders on the rise
-      with aspiring youth discovering their career paths. Through keynote talks,
-      workshops, and panels, take what you hear from the grape vine and learn what’s
-      next for you as you transition to post-secondary.
-    </p>
-    <div class="flex space-x-4">
-      <a href="#register" class="bg-white text-green-600 font-semibold px-6 py-3 rounded-full shadow">
-        Register
-      </a>
-      <a href="#learn-more" class="border border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-green-600 transition">
-        Learn More
-      </a>
+    <!-- centered text, left-aligned -->
+    <div class="absolute z-10 max-w-lg text-left"
+         style="left:4%; top:50%; transform:translateY(-50%);">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+        Explore Career Possibilities
+      </h2>
+      <p class="uppercase tracking-widest text-white mb-6">Your Tomorrow, Today</p>
+      <p class="text-lg leading-relaxed text-white mb-8">
+        Grapevine Career Conference connects the expertise… learn what’s next for you as you transition to post-secondary.
+      </p>
+      <div class="flex space-x-4">
+        <a href="#register" class="bg-white text-green-600 font-semibold px-6 py-3 rounded-full shadow">
+          Register
+        </a>
+        <a href="#learn-more" class="border border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-green-600 transition">
+          Learn More
+        </a>
+      </div>
     </div>
-  </div>
 
-  <!-- 4) five characters, %-based positions tuned to your originals -->
-  <img
-    src="/assets/landing-wheelchair.svg"
-    alt="Accessible speaker"
-    class="absolute z-20"
-     style="
-     width:10vw;
-     bottom:-1vw;
-     left:32vw;
-   "
-  />
-  <img
-    src="/assets/landing-man-walk.svg"
-    alt="Walking person"
-    class="absolute z-20"
-     style="
-     width:15vw;
-     bottom:0vw;
-     left:42vw;
-   "
-  />
-  <img
-    src="/assets/landing-woman-laptop.svg"
-    alt="Person on laptop"
-    class="absolute z-20"
-     style="
-     width:10vw;
-     bottom:0vw;
-     left:60vw;
-   "
-  />
-  <img
-    src="/assets/landing-woman-grapevine.svg"
-    alt="Person on vine"
-    class="absolute z-20"
-     style="
-     width:9vw;
-     bottom:-10.7vw;
-     left:74vw;
-   "
-  />
-  <img
-    src="/assets/landing-man-tablet.svg"
-    alt="Person networking"
-    class="absolute z-20"
-     style="
-     width:10vw;
-     bottom:-1.1vw;
-     left:85vw;
-   "
-  />
-</header>
+    <!-- five characters with responsive classes -->
+    <img src="/assets/landing-wheelchair.svg"
+         alt="Accessible speaker"
+         class="absolute z-20 char-1"/>
+
+    <img src="/assets/landing-man-walk.svg"
+         alt="Walking person"
+         class="absolute z-20 char-2"/>
+
+    <img src="/assets/landing-woman-laptop.svg"
+         alt="Person on laptop"
+         class="absolute z-20 char-3"/>
+
+    <img src="/assets/landing-woman-grapevine.svg"
+         alt="Person on vine"
+         class="absolute z-20 char-4"/>
+
+    <img src="/assets/landing-man-tablet.svg"
+         alt="Person networking"
+         class="absolute z-20 char-5"/>
+  </header>
 
 
  <!-- Highlights Section -->
