@@ -43,14 +43,22 @@
     <div class="absolute inset-0 bg-black opacity-20"></div>
 
     <!-- nav -->
-    <nav class="relative z-10 container mx-auto flex items-center justify-between px-4 py-6">
-      <img src="/assets/logo.svg" alt="Logo" class="h-8"/>
-      <ul class="flex space-x-6 text-white uppercase tracking-wide text-sm">
-        <li><a href="#about" class="hover:underline">About</a></li>
-        <li><a href="#program" class="hover:underline">Program</a></li>
+    <nav class="relative z-10 container mx-auto flex flex-wrap items-center justify-between px-4 py-6">
+      <!-- Logo always on the first line, left side -->
+      <img src="/assets/logo.svg" alt="Grapevine Conference Logo" class="h-8"/>
+
+      <!-- Menu: full-width & centered on mobile, auto-width & right-aligned on md+ -->
+      <ul
+        class="w-full md:w-auto flex flex-wrap justify-center md:justify-end
+              space-x-2 sm:space-x-4 md:space-x-6
+              mt-4 md:mt-0
+              text-white uppercase tracking-wide text-sm"
+      >
+        <li><a href="#about"    class="hover:underline">About</a></li>
+        <li><a href="#program"  class="hover:underline">Program</a></li>
         <li><a href="#register" class="hover:underline">Register</a></li>
         <li><a href="#sponsors" class="hover:underline">Sponsors</a></li>
-        <li><a href="#contact" class="hover:underline">Contact</a></li>
+        <li><a href="#contact"  class="hover:underline">Contact</a></li>
       </ul>
     </nav>
 
@@ -112,7 +120,7 @@
     </h2>
     
     <!-- Icons + captions -->
-    <div class="flex flex-col md:flex-row justify-around items-start md:items-center gap-y-8 md:gap-y-0 md:gap-x-6">
+    <div class="flex flex-col items-center justify-center space-y-8 md:flex-row md:justify-around md:space-y-0 md:space-x-6">
       <!-- 1 -->
       <div class="flex flex-col items-center space-y-4">
         <img src="/assets/landing-about-conference.svg" alt="Speakers" class="h-40 md:h-48" />
