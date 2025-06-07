@@ -1,119 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grapevine Conference 2025</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grapevine Conference</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins', sans-serif;
+      /* Prevent any horizontal scrolling */
+      overflow-x: hidden;
+    }
+
+    /* Desktop hero positions (vw + vw offsets) */
+    .char-1 { width:10vw; bottom:-1vw; left:32vw; }
+    .char-2 { width:15vw; bottom: 0;   left:42vw; }
+    .char-3 { width:10vw; bottom: 0;   left:60vw; }
+    .char-4 { width: 9vw; bottom:-10.7vw; left:74vw; }
+    .char-5 { width:10vw; bottom:-1.1vw; left:85vw; }
+
+    /* Mobile tweaks: fixed pixel sizes & positions */
+    @media (max-width: 640px) {
+      .char-1 { width:  60px; bottom: -10px; left:  20px; }
+      .char-2 { width:  80px; bottom: -10px; left: 100px; }
+      .char-3 { width:  60px; bottom: -10px; left: 180px; }
+      .char-4 { width:  80px; bottom: -10px; left: 260px; }
+      .char-5 { width:  60px; bottom: -10px; left: 340px; }
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold" style="color: #28197E">Grapevine 2025</h1>
-      <div class="space-x-4 hidden md:block">
-        <a href="#about" class="text-gray-700 transition-colors duration-300"
-            onmouseover="this.style.color='#412EAE'; this.style.fontWeight='700';"
-            onmouseout="this.style.color=''; this.style.fontWeight='';">About</a>
-        <a href="#schedule" class="text-gray-700 transition-colors duration-300"
-            onmouseover="this.style.color='#412EAE'; this.style.fontWeight='700';"
-            onmouseout="this.style.color=''; this.style.fontWeight='';">Schedule</a>
-        <a href="#register" class="text-gray-700 transition-colors duration-300"
-            onmouseover="this.style.color='#412EAE'; this.style.fontWeight='700';"
-            onmouseout="this.style.color=''; this.style.fontWeight='';">Register</a>
-        <a href="#contact" class="text-gray-700 transition-colors duration-300"
-            onmouseover="this.style.color='#412EAE'; this.style.fontWeight='700';"
-            onmouseout="this.style.color=''; this.style.fontWeight='';">Contact</a>
-      </div>
-    </div>
-  </nav>
+<body class="antialiased bg-green-50 text-green-900">
 
   <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-20 text-center">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Grapevine Conference 2025</h2>
-      <p class="text-lg md:text-xl">Empowering Tomorrow's Leaders with Innovation, Passion, and Purpose</p>
-      <a href="#register" class="inline-block mt-6 bg-white text-blue-700 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">Register Now</a>
-    </div>
-  </section>
+  <header id="hero" class="relative w-full h-screen overflow-visible">
+    <!-- full-screen bg + overlay -->
+    <img src="/assets/hero-bg.svg"
+         alt="Hero background"
+         class="absolute inset-0 w-full h-full object-cover"/>
+    <div class="absolute inset-0 bg-black opacity-20"></div>
 
-  <!-- Main Content -->
-  <main class="max-w-5xl mx-auto px-4 py-12 space-y-16">
+    <!-- nav -->
+    <nav class="relative z-10 container mx-auto flex flex-wrap items-center justify-between px-4 py-6">
+      <!-- Logo always on the first line, left side -->
+      <img src="/assets/logo.svg" alt="Grapevine Conference Logo" class="h-8"/>
 
-    <!-- About Section -->
-    <section id="about">
-      <h3 class="text-3xl font-bold mb-4">About the Conference</h3>
-      <p class="text-gray-700 text-lg leading-relaxed">
-        Grapevine 2025 brings together high school students from across the region to connect, grow, and lead.
-        Through keynote talks, workshops, and panels, students explore themes of leadership, creativity, and real-world impact.
+      <!-- Menu: full-width & centered on mobile, auto-width & right-aligned on md+ -->
+      <ul
+        class="w-full md:w-auto flex flex-wrap justify-center md:justify-end
+              space-x-2 sm:space-x-4 md:space-x-6
+              mt-4 md:mt-0
+              text-white uppercase tracking-wide text-sm"
+      >
+        <li><a href="#about"    class="hover:underline">About</a></li>
+        <li><a href="#program"  class="hover:underline">Program</a></li>
+        <li><a href="#register" class="hover:underline">Register</a></li>
+        <li><a href="#sponsors" class="hover:underline">Sponsors</a></li>
+        <li><a href="#contact"  class="hover:underline">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- centered text, left-aligned -->
+    <div class="absolute z-10 max-w-lg text-left"
+         style="left:4%; top:50%; transform:translateY(-50%);">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+        Explore Career Possibilities
+      </h2>
+      <p class="uppercase tracking-widest text-white mb-6">Your Tomorrow, Today</p>
+      <p class="text-lg leading-relaxed text-white mb-8">
+        Grapevine Career Conference connects the expertise… learn what’s next for you as you transition to post-secondary.
       </p>
-      <div class="text-left mt-8">
-        <a href="about.html"
-          class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition text-lg">
+      <div class="flex space-x-4">
+        <a href="#register" class="bg-white text-green-600 font-semibold px-6 py-3 rounded-full shadow">
+          Register
+        </a>
+        <a href="#learn-more" class="border border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-green-600 transition">
           Learn More
         </a>
       </div>
+    </div>
 
-    </section>
+    <!-- five characters with responsive classes -->
+    <img src="/assets/landing-wheelchair.svg"
+         alt="Accessible speaker"
+         class="absolute z-20 char-1"/>
 
-    <!-- Schedule Section -->
-    <section id="schedule">
-      <h3 class="text-3xl font-bold mb-6">Schedule</h3>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">10:00 AM – Opening Ceremony</h4>
-          <p class="text-gray-600">Welcome address and intro to the conference goals</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">11:00 AM – Keynote: Dr. Lisa Chang</h4>
-          <p class="text-gray-600">Inspiring the next generation of innovators</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">12:30 PM – Lunch Break</h4>
-          <p class="text-gray-600">Free catered lunch and networking time</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">2:00 PM – Breakout Workshops</h4>
-          <p class="text-gray-600">Choose from career panels, leadership training, or creativity labs</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">4:00 PM – Closing Remarks</h4>
-          <p class="text-gray-600">Conference recap and certificate distribution</p>
+    <img src="/assets/landing-man-walk.svg"
+         alt="Walking person"
+         class="absolute z-20 char-2"/>
+
+    <img src="/assets/landing-woman-laptop.svg"
+         alt="Person on laptop"
+         class="absolute z-20 char-3"/>
+
+    <img src="/assets/landing-woman-grapevine.svg"
+         alt="Person on vine"
+         class="absolute z-20 char-4"/>
+
+    <img src="/assets/landing-man-tablet.svg"
+         alt="Person networking"
+         class="absolute z-20 char-5"/>
+  </header>
+
+
+ <!-- Highlights Section -->
+<section id="highlights" class="relative bg-green-50">
+  <!-- Wave background, pulled up by -mt-1 -->
+  <div class="absolute inset-x-0 top-0 pointer-events-none -mt-1">
+    <img src="/assets/landing-about-bg.svg" alt="" class="w-full block" />
+  </div>
+
+  <!-- Content -->
+  <div class="relative container mx-auto text-center pt-24 pb-16 px-4">
+    <!-- Section heading -->
+    <h2 class="text-2xl md:text-3xl font-semibold text-green-900 mb-12">
+      Discover new opportunities, perspectives, and insights
+    </h2>
+    
+    <!-- Icons + captions -->
+    <div class="flex flex-col items-center justify-center space-y-8 md:flex-row md:justify-around md:space-y-0 md:space-x-6">
+      <!-- 1 -->
+      <div class="flex flex-col items-center space-y-4">
+        <img src="/assets/landing-about-conference.svg" alt="Speakers" class="h-40 md:h-48" />
+        <p class="text-lg font-semibold text-green-900 leading-snug">
+          Speakers across<br/>20+ industries
+        </p>
+      </div>
+      <!-- 2 -->
+      <div class="flex flex-col items-center space-y-4">
+        <img src="/assets/landing-about-scholarships.svg" alt="Scholarships" class="h-40 md:h-48" />
+        <p class="text-lg font-semibold text-green-900 leading-snug">
+          $5,000+ available<br/>in scholarships
+        </p>
+      </div>
+      <!-- 3 -->
+      <div class="flex flex-col items-center space-y-4">
+        <img src="/assets/landing-about-networking.svg" alt="Networking" class="h-40 md:h-48" />
+        <p class="text-lg font-semibold text-green-900 leading-snug">
+          Workshops and<br/>networking
+        </p>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <a
+      href="#program"
+      class="inline-block mt-12 px-6 py-3 border-2 border-green-700 text-green-700 font-medium rounded-full hover:bg-green-100 transition"
+    >
+      View program details here
+    </a>
+  </div>
+</section>
+
+<!-- How We Can Help / Registration Section -->
+<section id="registration" class="relative overflow-hidden bg-white">
+  <!-- full‐bleed decorative background -->
+  <div class="absolute inset-0 pointer-events-none -z-10">
+    <img src="/assets/registration-bg.svg" alt="" class="w-full h-full object-cover"/>
+  </div>
+
+  <div class="relative container mx-auto py-16 px-4">
+    <!-- heading -->
+    <h2 class="text-2xl md:text-3xl font-semibold text-green-900 mb-12">
+      The move to post-secondary can be scary… 
+      <span class="text-green-600 underline">here’s how we can help</span>
+    </h2>
+
+    <div class="space-y-16">
+      <!-- Fact #1: right-aligned -->
+      <div class="flex justify-end">
+        <div class="relative w-full md:w-2/3">
+          <!-- box background as an <img> with object-cover -->
+          <!-- content -->
+          <div class="relative flex flex-col md:flex-row items-center md:items-start p-8">
+            <div class="w-full md:w-1/3">
+              <img src="/assets/placeholder.svg" alt="Fact 1 image" class="w-full rounded"/>
+            </div>
+            <div class="mt-6 md:mt-0 md:ml-8 w-full md:w-2/3">
+              <h3 class="text-lg font-semibold text-green-900 mb-2">
+                1. Fact One You Want to Share
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit...
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Registration Section -->
-    <section id="register" class="text-center">
-      <h3 class="text-3xl font-bold mb-4">Register Now</h3>
-      <p class="mb-6 text-gray-700">Spots are limited! Register early to guarantee your place.</p>
-      <a href="https://forms.gle/your-google-form-link" target="_blank"
-         class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition text-lg">
-        Fill Out the Form
+      <!-- Fact #2: left-aligned -->
+      <div class="flex justify-start">
+        <div class="relative w-full md:w-2/3">
+          <div class="relative flex flex-col md:flex-row items-center md:items-start p-8">
+            <div class="w-full md:w-1/3">
+              <img src="/assets/placeholder.svg" alt="Fact 2 image" class="w-full rounded"/>
+            </div>
+            <div class="mt-6 md:mt-0 md:ml-8 w-full md:w-2/3">
+              <h3 class="text-lg font-semibold text-green-900 mb-2">
+                2. Fact Two You Want to Share
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fact #3: right-aligned -->
+      <div class="flex justify-end">
+        <div class="relative w-full md:w-2/3">
+          <div class="relative flex flex-col md:flex-row items-center md:items-start p-8">
+            <div class="w-full md:w-1/3">
+              <img src="/assets/placeholder.svg" alt="Fact 3 image" class="w-full rounded"/>
+            </div>
+            <div class="mt-6 md:mt-0 md:ml-8 w-full md:w-2/3">
+              <h3 class="text-lg font-semibold text-green-900 mb-2">
+                3. Fact Three You Want to Share
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Explore Section -->
+<section id="explore" class="bg-green-50 text-green-900 py-16 px-4">
+  <div class="container mx-auto flex flex-col items-center">
+    <!-- Heading -->
+    <h2 class="text-2xl md:text-3xl font-semibold mb-8 text-center">
+      Explore new opportunities at Grapevine 2025!
+    </h2>
+
+    <!-- Big hero graphic -->
+    <img
+      src="/assets/explore-group.svg"
+      alt="People exploring data"
+      class="w-3/7 md:w-1/3 mb-12 object-contain mx-auto"
+    />
+
+    <!-- Three cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+      <!-- Volunteer -->
+      <div class="flex flex-col items-center text-center space-y-4">
+        <h3 class="text-xl font-semibold">Volunteer</h3>
+        <p class="text-gray-700">
+          As a non-profit organization we could always use an extra helping hand! Want to make a difference for hundreds of youth across the GTA?
+        </p>
+        <a
+          href="#volunteer"
+          class="inline-block mt-2 px-6 py-2 border-2 border-green-700 text-green-700 font-medium rounded-full hover:bg-green-100 transition"
+        >
+          Volunteer Registration
+        </a>
+      </div>
+
+      <!-- Attendee -->
+      <div class="flex flex-col items-center text-center space-y-4">
+        <h3 class="text-xl font-semibold">Attendee Registration</h3>
+        <p class="text-gray-700">
+          Gain insights on your career path and discover critical insights on the journey ahead of you!
+        </p>
+        <a
+          href="#attendee"
+          class="inline-block mt-2 px-6 py-2 border-2 border-green-700 text-green-700 font-medium rounded-full hover:bg-green-100 transition"
+        >
+          Attendee Registration
+        </a>
+      </div>
+
+      <!-- Sponsorship -->
+      <div class="flex flex-col items-center text-center space-y-4">
+        <h3 class="text-xl font-semibold">Sponsorship</h3>
+        <p class="text-gray-700">
+          Looking to give back to youth in your community? Reach out to our team to learn how you can help!
+        </p>
+        <a
+          href="#sponsors"
+          class="inline-block mt-2 px-6 py-2 border-2 border-green-700 text-green-700 font-medium rounded-full hover:bg-green-100 transition"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave Divider into Footer -->
+<div class="overflow-hidden">
+  <img
+    src="/assets/footer.svg"
+    alt=""
+    class="w-full block object-cover"
+  />
+</div>
+
+<!-- Footer -->
+<footer class="bg-green-800 text-green-50">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between py-12 px-4 space-y-6 md:space-y-0">
+    <!-- Logo & Tagline -->
+    <div class="flex flex-col items-center md:items-start">
+      <img src="/assets/logo.svg" alt="Grapevine Conference Logo" class="h-10 mb-2"/>
+      <span class="uppercase text-sm">Your Tomorrow, Today</span>
+    </div>
+
+    <!-- Nav & Contact -->
+    <nav class="flex flex-col md:flex-row items-center text-sm space-y-4 md:space-y-0 md:space-x-6">
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#register" class="hover:underline">Register</a>
+      <a href="#program" class="hover:underline">Program</a>
+      <a href="#sponsors" class="hover:underline">Sponsors</a>
+      <a href="mailto:ontarioyouthgrapevinenetwork@gmail.com" class="hover:underline">
+        ontarioyouthgrapevinenetwork@gmail.com
       </a>
-    </section>
+    </nav>
+  </div>
+</footer>
 
-    <!-- Contact Section -->
-    <section id="contact" class="text-center">
-      <h3 class="text-3xl font-bold mb-2">Contact</h3>
-      <p class="text-gray-700">Questions? Reach out to us at:</p>
-      <p class="font-medium mt-1">grapevine2025@example.com</p>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-white border-t text-center py-6 text-sm text-gray-500">
-    © 2025 Grapevine. All rights reserved.
-  </footer>
 
 </body>
 </html>
