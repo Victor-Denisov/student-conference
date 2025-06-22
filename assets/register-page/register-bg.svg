@@ -1,0 +1,16 @@
+<svg width="1440" height="810" viewBox="0 0 1440 810" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_232_546)">
+<rect width="1440" height="810" fill="#EDF6EF"/>
+<circle cx="29" cy="252" r="101" stroke="#501F6B" stroke-opacity="0.44" stroke-width="2" stroke-dasharray="6 6"/>
+<circle cx="152.5" cy="423.5" r="62.5" stroke="#501F6B" stroke-opacity="0.44" stroke-width="2" stroke-dasharray="6 6"/>
+<circle cx="1195.5" cy="192.5" r="41.5" stroke="#501F6B" stroke-opacity="0.44" stroke-width="2" stroke-dasharray="6 6"/>
+<circle cx="1365.5" cy="311.5" r="87.5" stroke="#501F6B" stroke-opacity="0.44" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M1420.22 465.685C1419.75 465.742 1419.28 465.8 1418.81 465.858M1418.81 465.858C1360.8 473.091 1339.95 488.018 1332.05 540.441C1389.37 547.726 1401.83 521.241 1418.81 465.858Z" stroke="#47A45D" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M176.077 121.853C176.025 122.269 175.975 122.684 175.925 123.097M175.925 123.097C169.774 174.362 178.131 195.412 221.385 213.344C239.831 165.768 219.781 149.449 175.925 123.097Z" stroke="#47A45D" stroke-width="2" stroke-dasharray="6 6"/>
+</g>
+<defs>
+<clipPath id="clip0_232_546">
+<rect width="1440" height="810" fill="white"/>
+</clipPath>
+</defs>
+</svg>
