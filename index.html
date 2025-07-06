@@ -4,15 +4,18 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Grapevine Conference</title>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lexend+Deca:wght@400;500&display=swap" rel="stylesheet"/>
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      /* Prevent any horizontal scrolling */
+      font-family: 'Lexend Deca', sans-serif;
       overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'DM Sans', sans-serif;
     }
 
     /* Desktop hero positions (vw + vw offsets) */
@@ -43,24 +46,25 @@
     <div class="absolute inset-0 bg-black opacity-20"></div>
 
     <!-- nav -->
-    <nav class="relative z-10 container mx-auto flex flex-wrap items-center justify-between px-4 py-6">
-      <!-- Logo always on the first line, left side -->
-      <img src="/assets/logo.svg" alt="Grapevine Conference Logo" class="h-8"/>
+<nav style="background-color: rgba(78, 163, 98, 1);" class="relative z-10 w-full flex flex-wrap items-center justify-between px-8 py-6 text-white">
+  <!-- Logo always on the first line, left side -->
+  <img src="/assets/logo.svg" alt="Grapevine Conference Logo" class="h-8"/>
 
-      <!-- Menu: full-width & centered on mobile, auto-width & right-aligned on md+ -->
-      <ul
-        class="w-full md:w-auto flex flex-wrap justify-center md:justify-end
-              space-x-2 sm:space-x-4 md:space-x-6
-              mt-4 md:mt-0
-              text-white uppercase tracking-wide text-sm"
-      >
-        <li><a href="#about"    class="hover:underline">About</a></li>
-        <li><a href="#program"  class="hover:underline">Program</a></li>
-        <li><a href="#register" class="hover:underline">Register</a></li>
-        <li><a href="#sponsors" class="hover:underline">Sponsors</a></li>
-        <li><a href="#contact"  class="hover:underline">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Menu: full-width & centered on mobile, auto-width & right-aligned on md+ -->
+  <ul
+    class="w-full md:w-auto flex flex-wrap justify-center md:justify-end
+          space-x-2 sm:space-x-4 md:space-x-6
+          mt-4 md:mt-0
+          text-white uppercase tracking-wide text-sm"
+  >
+    <li><a href="about.html" class="hover:underline">About</a></li>
+    <li><a href="program.html"  class="hover:underline">Program</a></li>
+    <li><a href="register.html" class="hover:underline">Register</a></li>
+    <li><a href="sponsors.html" class="hover:underline">Sponsors</a></li>
+    <li><a href="contact.html"  class="hover:underline">Contact</a></li>
+  </ul>
+</nav>
+
 
     <!-- centered text, left-aligned -->
     <div class="absolute z-10 max-w-lg text-left"
@@ -170,59 +174,67 @@
 
     <div class="space-y-16">
       <!-- Fact #1: right-aligned -->
-      <div class="flex justify-end">
-        <div class="relative w-full md:w-2/3">
-          <!-- box background as an <img> with object-cover -->
-          <!-- content -->
-          <div class="relative flex flex-col md:flex-row items-center md:items-start p-8">
-            <div class="w-full md:w-1/3">
-              <img src="/assets/landing-page/placeholder.svg" alt="Fact 1 image" class="w-full rounded"/>
-            </div>
-            <div class="mt-6 md:mt-0 md:ml-8 w-full md:w-2/3">
-              <h3 class="text-lg font-semibold text-green-900 mb-2">
-                1. Fact One You Want to Share
-              </h3>
-              <p class="text-gray-700 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit...
-              </p>
-            </div>
+    <div class="flex justify-end">
+      <div class="relative w-full md:w-2/3">
+        <div class="bg-green-50 rounded-xl shadow p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start">
+          <!-- Image -->
+          <div class="w-full md:w-1/3">
+            <img src="/assets/landing-page/woman-checklist.svg" alt="Fact 1 image" class="w-full rounded"/>
           </div>
-        </div>
+          <!-- Text -->
+          <div class="mt-6 md:mt-0 md:ml-8 w-full md:w-2/3">
+            <h3 class="text-lg font-semibold text-green-900 mb-2">
+              Career Journeys
+            </h3>
+            <p class="text-green-700 leading-relaxed mb-1">
+              Real Stories From Real People
+            </p>
+            <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+              Meet young professionals just 8–10 years ahead of you. Hear real stories, defining career moments, and what their day-to-day life looks like across various industries.
+            </p>
+          </div>
+        </div>        
       </div>
+    </div>
+
 
       <!-- Fact #2: left-aligned -->
-      <div class="flex justify-start">
-        <div class="relative w-full md:w-2/3">
-          <div class="relative flex flex-col md:flex-row items-center md:items-start p-8">
+    <div class="flex justify-start">
+      <div class="relative w-full md:w-2/3">
+        <div class="bg-green-50 rounded-xl shadow p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start">
             <div class="w-full md:w-1/3">
-              <img src="/assets/landing-page/placeholder.svg" alt="Fact 2 image" class="w-full rounded"/>
+              <img src="/assets/landing-page/teamwork.svg" alt="Fact 2 image" class="w-full rounded"/>
             </div>
             <div class="mt-6 md:mt-0 md:ml-8 w-full md:w-2/3">
               <h3 class="text-lg font-semibold text-green-900 mb-2">
-                2. Fact Two You Want to Share
+                University Voices             
               </h3>
-              <p class="text-gray-700 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit...
+              <p class="text-green-700 leading-relaxed mb-1">
+                The Student Perspective               
               </p>
+              <p class="text-gray-700 leading-relaxed">
+                Students from top Canadian universities will share what post-secondary life is really like — the highlights, the hurdles, and everything they wish they knew before applying.              </p>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Fact #3: right-aligned -->
-      <div class="flex justify-end">
-        <div class="relative w-full md:w-2/3">
-          <div class="relative flex flex-col md:flex-row items-center md:items-start p-8">
+    <div class="flex justify-end">
+      <div class="relative w-full md:w-2/3">
+        <div class="bg-green-50 rounded-xl shadow p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start">
             <div class="w-full md:w-1/3">
-              <img src="/assets/landing-page/placeholder.svg" alt="Fact 3 image" class="w-full rounded"/>
+              <img src="/assets/landing-page/study-zoom.svg" alt="Fact 3 image" class="w-full rounded"/>
             </div>
             <div class="mt-6 md:mt-0 md:ml-8 w-full md:w-2/3">
               <h3 class="text-lg font-semibold text-green-900 mb-2">
-                3. Fact Three You Want to Share
+                Your Professional Toolkit              
               </h3>
-              <p class="text-gray-700 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit...
+              <p class="text-green-700 leading-relaxed mb-1">
+                Practical Resources for Success
               </p>
+              <p class="text-gray-700 leading-relaxed">
+                From soft skills workshops and resume tips to university cheat sheets and networking, our conference equips you with tools to plan and pursue your future goals with confidence.              </p>
             </div>
           </div>
         </div>
@@ -255,7 +267,7 @@
           As a non-profit organization we could always use an extra helping hand! Want to make a difference for hundreds of youth across the GTA?
         </p>
         <a
-          href="#volunteer"
+          href="volunteer.html"
           class="inline-block mt-2 px-6 py-2 border-2 border-green-700 text-green-700 font-medium rounded-full hover:bg-green-100 transition"
         >
           Volunteer Registration
@@ -269,7 +281,7 @@
           Gain insights on your career path and discover critical insights on the journey ahead of you!
         </p>
         <a
-          href="#attendee"
+          href="attendee.html"
           class="inline-block mt-2 px-6 py-2 border-2 border-green-700 text-green-700 font-medium rounded-full hover:bg-green-100 transition"
         >
           Attendee Registration
@@ -283,7 +295,7 @@
           Looking to give back to youth in your community? Reach out to our team to learn how you can help!
         </p>
         <a
-          href="#sponsors"
+          href="sponsors.html"
           class="inline-block mt-2 px-6 py-2 border-2 border-green-700 text-green-700 font-medium rounded-full hover:bg-green-100 transition"
         >
           Learn More
@@ -302,9 +314,9 @@
   />
 </div>
 
-<!-- Footer -->
-<footer class="bg-green-800 text-green-50">
-  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between py-12 px-4 space-y-6 md:space-y-0">
+<footer style="background-color: rgba(78, 163, 98, 1);" class="text-white w-full">
+  <div class="w-full px-8 py-12 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+
     <!-- Logo & Tagline -->
     <div class="flex flex-col items-center md:items-start">
       <img src="/assets/logo.svg" alt="Grapevine Conference Logo" class="h-10 mb-2"/>
@@ -313,10 +325,10 @@
 
     <!-- Nav & Contact -->
     <nav class="flex flex-col md:flex-row items-center text-sm space-y-4 md:space-y-0 md:space-x-6">
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#register" class="hover:underline">Register</a>
-      <a href="#program" class="hover:underline">Program</a>
-      <a href="#sponsors" class="hover:underline">Sponsors</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="register.html" class="hover:underline">Register</a>
+      <a href="program.html" class="hover:underline">Program</a>
+      <a href="sponsors.html" class="hover:underline">Sponsors</a>
       <a href="mailto:ontarioyouthgrapevinenetwork@gmail.com" class="hover:underline">
         ontarioyouthgrapevinenetwork@gmail.com
       </a>

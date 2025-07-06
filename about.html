@@ -2,47 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About – Grapevine 2025</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>body { font-family: 'Lexend Deca', sans-serif; }</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Grapevine Conference</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lexend+Deca:wght@400;500&display=swap" rel="stylesheet"/>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Lexend Deca', sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'DM Sans', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white-50 text-green-900">
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-700">Grapevine 2025</h1>
-      <div class="space-x-4">
-        <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
-        <a href="schedule.html" class="text-gray-700 hover:text-blue-600">Schedule</a>
-        <a href="sponsors.html" class="text-gray-700 hover:text-blue-600">Sponsors</a>
-      </div>
+<!-- Navigation -->
+<nav style="background-color: rgba(78, 163, 98, 1);" class="text-white px-4 py-4 flex justify-between items-center">
+  <a href="index.html">
+    <img src="/assets/logo.svg" alt="Grapevine Logo" class="h-8">
+  </a>
+  <ul class="flex space-x-4 text-sm uppercase tracking-wide">
+    <li><a href="about.html" class="hover:underline">About</a></li>
+    <li><a href="program.html" class="hover:underline">Program</a></li>
+    <li><a href="index.html#register" class="hover:underline">Register</a></li>
+    <li><a href="index.html#sponsors" class="hover:underline">Sponsors</a></li>
+    <li><a href="index.html#contact" class="hover:underline">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Header Section -->
+<header class="relative w-full bg-white-100 py-20 px-6 overflow-hidden">
+  <!-- Decorative SVG (placed in corners) -->
+  <img src="/assets/about-page/about-header.svg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0" />
+
+  <!-- Content on top -->
+  <div class="relative z-10 max-w-4xl mx-auto text-left">
+    <h2 class="text-sm font-semibold text-green-800 mb-2">About Us</h2>
+    <p class="text-3xl md:text-4xl font-bold leading-snug text-green-900">
+      We've been in your shoes - we can help you find your path
+    </p>
+  </div>
+</header>
+
+<!-- Mission -->
+<section class="bg-white px-6 py-12 text-center">
+  <div class="bg-green-100 rounded-xl p-6 max-w-3xl mx-auto shadow">
+    <h3 class="text-green-700 font-semibold text-lg mb-2">Our Mission</h3>
+    <p class="text-gray-800">
+      Empowering youths with the tools, perspectives, and support needed to navigate their post-secondary paths and contribute positively to their communities.
+    </p>
+  </div>
+</section>
+
+<!-- Who We Are / Help -->
+<section class="px-6 py-12 space-y-16">
+  <div class="flex flex-col md:flex-row items-center md:space-x-8">
+    <img src="/assets/about-page/scrum-board.svg" alt="Scrum board" class="w-full md:w-1/2 mb-6 md:mb-0"/>
+    <div class="md:w-1/2">
+      <h3 class="text-green-800 font-semibold text-xl mb-2">Who We Are</h3>
+      <p class="text-gray-700">
+        OYGN is a youth-led, nonprofit organization focused on empowering high school students across Ontario through career exploration, university prep, and leadership growth. We’ve been where you are - and we’re here to help you take the next step with confidence.
+      </p>
     </div>
-  </nav>
+  </div>
 
-  <!-- About Details -->
-  <main class="max-w-4xl mx-auto px-4 py-12 space-y-6">
-    <h2 class="text-4xl font-bold mb-4">About Grapevine 2025</h2>
-    <p class="text-lg text-gray-700 leading-relaxed">
-      Grapevine is a one-day event designed to empower and equip high school students with the skills,
-      inspiration, and connections they need to become tomorrow's leaders.
-    </p>
-    <p class="text-lg text-gray-700 leading-relaxed">
-      Featuring industry speakers, hands-on workshops, leadership training, and real-world projects, the conference
-      creates a platform for students to challenge themselves and grow.
-    </p>
-    <p class="text-lg text-gray-700 leading-relaxed">
-      Whether you're passionate about technology, entrepreneurship, art, or social change, Grapevine has
-      something for you.
-    </p>
-  </main>
+  <div class="flex flex-col-reverse md:flex-row items-center md:space-x-8">
+    <div class="md:w-1/2 mt-6 md:mt-0">
+      <h3 class="text-green-800 font-semibold text-xl mb-2">How We Can Help</h3>
+      <p class="text-gray-700">
+        From career workshops to university application support, we will give you tools, insights, and connections to plan your future. Our events are built to inspire and guide you - through real stories, practical resources, and a community that believes in your potential.
+      </p>
+    </div>
+    <img src="/assets/about-page/connecting-circle-heads.svg" alt="Connecting heads" class="w-full md:w-1/2"/>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="bg-white border-t text-center py-6 text-sm text-gray-500">
-    © 2025 Grapevine. All rights reserved.
-  </footer>
+<!-- Values -->
+<section class="bg-white px-6 py-12">
+  <h3 class="text-2xl font-semibold text-center mb-10">Our Values</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <!-- Repeat 4 value cards -->
+    <div>
+      <img src="/assets/about-page/empower.svg" alt="" class="mx-auto mb-4 w-20 h-20"/>
+      <h3 class="text-green-800 font-semibold text-xl mb-2">Empowerment</h3>
+      <p class="text-sm text-gray-700 mt-2">We equip youth with tools, knowledge, and confidence to take charge of their future and define success on their own terms.</p>
+    </div>
+    <div>
+      <img src="/assets/about-page/community.svg" alt="" class="mx-auto mb-4 w-20 h-20"/>
+      <h3 class="text-green-800 font-semibold text-xl mb-2">Communinty</h3>
+      <p class="text-sm text-gray-700 mt-2">We build spaces where students, mentors, and educators come together to support, uplift, and grow alongside each other.</p>
+    </div>
+    <div>
+      <img src="/assets/about-page/community.svg" alt="" class="mx-auto mb-4 w-20 h-20"/>
+      <h3 class="text-green-800 font-semibold text-xl mb-2">Relatability</h3>
+      <p class="text-sm text-gray-700 mt-2">Our conferences are led by students and young professionals who truly understand your journey - because they’ve lived it too.</p>
+    </div>
+    <div>
+      <img src="/assets/about-page/accessibility.svg" alt="" class="mx-auto mb-4 w-20 h-20"/>
+      <h3 class="text-green-800 font-semibold text-xl mb-2">Accessibility</h3>
+      <p class="text-sm text-gray-700 mt-2">We believe every student, regardless of background, deserves access to meaningful career and education guidance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="text-center py-12 bg-green-50">
+  <h3 class="text-xl font-semibold mb-6">Interested in the Work We Do?</h3>
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+    <a href="index.html#volunteer" class="px-6 py-3 border-2 border-green-700 rounded-full text-green-700 font-medium hover:bg-green-100">Volunteer Registration</a>
+    <a href="index.html#sponsors" class="px-6 py-3 border-2 border-green-700 rounded-full text-green-700 font-medium hover:bg-green-100">Sponsorship Opportunities</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer style="background-color: rgba(78, 163, 98, 1);" class="text-white w-full">
+  <div class="w-full px-8 py-12 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+    <div>
+      <img src="/assets/logo.svg" alt="Grapevine Logo" class="h-10 mx-auto md:mx-0 mb-2">
+      <p class="text-sm uppercase">Your Tomorrow, Today</p>
+    </div>
+    <nav class="space-x-4 text-sm">
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="register.html" class="hover:underline">Register</a>
+      <a href="program.html" class="hover:underline">Program</a>
+      <a href="sponsors.html" class="hover:underline">Sponsors</a>
+      <a href="mailto:ontarioyouthgrapevinenetwork@gmail.com" class="hover:underline">Contact</a>
+    </nav>
+  </div>
+</footer>
 
 </body>
 </html>
