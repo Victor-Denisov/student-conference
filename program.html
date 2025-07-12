@@ -21,15 +21,25 @@
 </head>
 <body style="background-color: rgba(78, 163, 98, 1);" class="text-white antialiased">
 
-<!-- NAVBAR (reuse from index.html) -->
-<nav style="background-color: rgba(78, 163, 98, 1);" class="w-full flex flex-wrap items-center justify-between px-8 py-6 text-white">
-  <img src="/assets/logo.svg" alt="Grapevine Conference Logo" class="h-8"/>
-  <ul class="w-full md:w-auto flex flex-wrap justify-center md:justify-end space-x-4 mt-4 md:mt-0 uppercase tracking-wide text-sm">
+<!-- Navigation -->
+<nav style="background-color: rgba(78, 163, 98, 1);" class="relative z-10 w-full flex flex-wrap items-center justify-between px-8 py-6 text-white">
+  <!-- Logo always on the first line, left side -->
+   <a href="index.html" class="w-full md:w-auto mb-2 md:mb-0 flex justify-center md:justify-start">
+    <img src="/assets/logo.svg" alt="Grapevine Logo" class="h-8">
+  </a>
+
+  <!-- Menu: full-width & centered on mobile, auto-width & right-aligned on md+ -->
+  <ul
+    class="w-full md:w-auto flex flex-wrap justify-center md:justify-end
+          space-x-2 sm:space-x-4 md:space-x-6
+          mt-4 md:mt-0
+          text-white uppercase tracking-wide text-sm"
+  >
     <li><a href="about.html" class="hover:underline">About</a></li>
-    <li><a href="program.html" class="hover:underline">Program</a></li>
+    <li><a href="program.html"  class="hover:underline">Program</a></li>
     <li><a href="register.html" class="hover:underline">Register</a></li>
     <li><a href="sponsors.html" class="hover:underline">Sponsors</a></li>
-    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+    <li><a href="contact.html"  class="hover:underline">Contact</a></li>
   </ul>
 </nav>
 
@@ -122,7 +132,7 @@
 
 <!-- FOOTER -->
 <footer style="background-color: rgba(78, 163, 98, 1);" class="text-white w-full">
-  <div class="w-full px-8 py-12 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+  <div class="w-full px-8 py-8 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <div class="flex flex-col items-center md:items-start">
       <img src="/assets/logo.svg" alt="Grapevine Logo" class="h-10 mb-2"/>
       <p class="uppercase text-sm">Your Tomorrow, Today</p>
@@ -132,9 +142,7 @@
       <a href="program.html" class="hover:underline">Program</a>
       <a href="register.html" class="hover:underline">Register</a>
       <a href="sponsors.html" class="hover:underline">Sponsors</a>
-      <a href="mailto:ontarioyouthgrapevinenetwork@gmail.com" class="hover:underline">
-        ontarioyouthgrapevinenetwork@gmail.com
-      </a>
+      <a href="mailto:ontarioyouthgrapevinenetwork@gmail.com" class="hover:underline">ontarioyouthgrapevinenetwork@gmail.com</a>
     </nav>
   </div>
 </footer>

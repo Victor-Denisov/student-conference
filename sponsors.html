@@ -4,55 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sponsors - Grapevine Conference</title>
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lexend+Deca:wght@400;500&display=swap" rel="stylesheet"/>
-  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
     body {
       font-family: 'Lexend Deca', sans-serif;
       overflow-x: hidden;
     }
-
     h1, h2, h3, h4, h5, h6 {
       font-family: 'DM Sans', sans-serif;
+    }
+    .svg-line {
+      width: 50px;
+      height: auto;
+    }
+    .svg-blob {
+      position: absolute;
+      opacity: 0.5;
+      z-index: 0;
     }
   </style>
 </head>
 <body class="bg-green-50 text-green-900">
 
-<!-- NAV -->
-<nav style="background-color: rgba(78, 163, 98, 1);" class="w-full flex flex-wrap items-center justify-between px-8 py-4 text-white">
-  <img src="/assets/logo.svg" alt="Grapevine Conference Logo" class="h-8"/>
-  <ul class="w-full md:w-auto flex flex-wrap justify-center md:justify-end space-x-4 mt-4 md:mt-0 uppercase tracking-wide text-sm">
+<!-- Navigation -->
+<nav style="background-color: rgba(78, 163, 98, 1);" class="relative z-10 w-full flex flex-wrap items-center justify-between px-8 py-6 text-white">
+  <a href="index.html" class="w-full md:w-auto mb-2 md:mb-0 flex justify-center md:justify-start">
+    <img src="/assets/logo.svg" alt="Grapevine Logo" class="h-8">
+  </a>
+  <ul class="w-full md:w-auto flex flex-wrap justify-center md:justify-end space-x-2 sm:space-x-4 md:space-x-6 mt-4 md:mt-0 text-white uppercase tracking-wide text-sm">
     <li><a href="about.html" class="hover:underline">About</a></li>
     <li><a href="program.html" class="hover:underline">Program</a></li>
-    <li><a href="index.html#register" class="hover:underline">Register</a></li>
+    <li><a href="register.html" class="hover:underline">Register</a></li>
     <li><a href="sponsors.html" class="hover:underline">Sponsors</a></li>
-    <li><a href="index.html#contact" class="hover:underline">Contact</a></li>
+    <li><a href="contact.html" class="hover:underline">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HEADER -->
-<header class="relative w-full px-6 py-12 bg-green-50">
+<header class="relative w-full px-6 py-16 bg-green-50">
   <img src="/assets/sponsor-page/sponsor-header.svg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"/>
-  <div class="relative z-10 max-w-4xl mx-auto">
-    <h2 class="text-sm font-semibold mb-2">Sponsors</h2>
-    <p class="text-3xl md:text-4xl font-bold leading-snug mb-4">Planting the seeds to help our youth grow!</p>
+  <div class="relative z-10 max-w-4xl mx-auto text-center">
+    <h2 class="text-lg md:text-xl font-semibold mb-2 uppercase tracking-wide">Sponsors</h2>
+    <p class="text-4xl md:text-5xl font-bold leading-tight mb-6">Planting the seeds to help our youth grow!</p>
     <a href="/assets/sponsorship-package.pdf" target="_blank" class="inline-block border-2 border-green-700 text-green-700 px-6 py-2 rounded-full font-medium hover:bg-green-100 transition">Sponsorship Package</a>
   </div>
 </header>
 
 <!-- WHO YOU IMPACT -->
-<section class="bg-white py-10 px-6 text-center relative z-10">
-  <img src="/assets/sponsor-page/sponsor-bg.svg" alt="" class="absolute top-0 left-0 w-full object-cover pointer-events-none z-0" />
+<section class="relative bg-white py-14 px-6 text-center z-10">
+
   <div class="relative z-10 max-w-5xl mx-auto">
-    <h3 class="text-xl font-bold mb-6">Who You Impact</h3>
+    <div class="flex justify-center items-center mb-4 space-x-6">
+      <h3 class="text-2xl md:text-3xl font-bold">Who You Impact</h3>
+    </div>
+
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-green-900 font-semibold text-lg">
-      <div><span class="block text-2xl font-bold">50+</span> Schools across Ontario</div>
-      <div><span class="block text-2xl font-bold">200+</span> Online Students</div>
-      <div><span class="block text-2xl font-bold">300+</span> In-Person Students</div>
-      <div><span class="block text-2xl font-bold">5,000+</span> Across Digital Network</div>
+      <div><span class="block text-3xl md:text-6xl font-extrabold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5)">50+</span> Schools across Ontario</div>
+      <div><span class="block text-3xl md:text-6xl font-extrabold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5)">200+</span> Online Students</div>
+      <div><span class="block text-3xl md:text-6xl font-extrabold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5)">300+</span> In-Person Students</div>
+      <div><span class="block text-3xl md:text-6xl font-extrabold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5)">5,000+</span> Across Digital Network</div>
     </div>
   </div>
 </section>
@@ -60,31 +71,26 @@
 <!-- SUPPORT IMPACT VISUAL SECTION -->
 <section class="relative bg-white py-16 px-6">
   <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-12 gap-6 items-center min-h-[600px]">
-    <!-- Box 1 -->
-    <div class="col-span-9 md:col-span-4 row-start-1 md:row-start-1">
+    <div class="col-span-9 md:col-span-4 row-start-1">
       <div class="bg-green-100 p-8 rounded-xl shadow text-green-900 font-semibold w-full">
         Keep the event 100% free<br>for all student participants
       </div>
     </div>
-    <!-- Image 1 -->
     <div class="hidden md:block col-span-12 md:col-span-7 row-start-1 text-right">
       <img src="/assets/sponsor-page/woman-books.svg" alt="Woman on books" class="h-48 inline-block" />
     </div>
 
-    <!-- Box 2 -->
     <div class="col-span-9 md:col-start-4 md:col-span-4 row-start-2">
       <div class="bg-green-100 p-8 rounded-xl shadow text-green-900 font-semibold w-full">
         Offer meaningful, merit-based scholarships to students
       </div>
     </div>
 
-    <!-- Box 3 -->
-    <div class="col-span-9 md:col-span-4 row-start-3 md:row-start-3 md:col-start-8">
+    <div class="col-span-9 md:col-span-4 row-start-3 md:col-start-8">
       <div class="bg-green-100 p-8 rounded-xl shadow text-green-900 font-semibold w-full">
         Inspire students to explore<br>new career paths across industries
       </div>
     </div>
-    <!-- Image 2 -->
     <div class="hidden md:block col-span-12 md:col-span-4 row-start-3 md:col-start-1">
       <img src="/assets/sponsor-page/man-mirror.svg" alt="Man in mirror" class="h-48 inline-block" />
     </div>
@@ -92,59 +98,40 @@
 </section>
 
 <!-- SPONSORSHIP TIERS -->
-<section class="relative bg-white px-6 pt-16 pb-32 overflow-hidden">
-    <!-- Decorative Banner -->
-    <div class="flex justify-center mb-12">
-      <img src="/assets/sponsor-page/sponsorship-banner.svg" alt="Sponsorship Banner" class="w-full max-w-6xl h-auto" />
+<section class="relative bg-white pt-16 pb-32 overflow-hidden">
+  <div class="flex justify-center mb-12">
+    <img src="/assets/sponsor-page/sponsorship-banner.svg" alt="Sponsorship Banner" class="w-full h-auto" />
+  </div>
+  <div class="relative w-full">
+    <img src="/assets/sponsor-page/people-balloons.svg" alt="People with Balloons" class="w-full mx-auto relative z-0" />
+    <div class="absolute top-0 left-0 md:-top-16 md:left-10 z-10">
+      <img src="/assets/sponsor-page/sponsorship-tiers.svg" alt="Sponsorship Tiers" class="w-full max-w-none" />
     </div>
-  
-    <div class="relative max-w-7xl mx-auto">
-        <!-- Balloons image -->
-        <img src="/assets/sponsor-page/people-balloons.svg" alt="People with Balloons"
-             class="w-full max-w-5xl mx-auto relative z-0" />
-      
-        <!-- Sponsorship tiers in top-left corner -->
-        <div class="absolute top-0 left-0 md:-top-16 md:left-10 z-10">
-            <img src="/assets/sponsor-page/sponsorship-tiers.svg" alt="Sponsorship Tiers"
-                 class="w-full max-w-xl md:max-w-lg xl:max-w-2xl" />
-          </div>          
-      </div>      
-  
-    </div>
-  </section>
-    
+  </div>
+</section>
 
 <!-- MORE INFO -->
-<section class="bg-white py-16 px-6">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center text-center md:text-left gap-8">
-      
-      <!-- Left Image -->
-      <div class="flex justify-center md:justify-start">
-        <img src="/assets/sponsor-page/woman-computer.svg" alt="Woman with Books" class="w-48 md:w-64 lg:w-72" />
-      </div>
-  
-      <!-- Center Text & Button -->
-      <div class="text-center md:col-span-1">
-        <p class="mb-6 text-green-900 text-lg font-medium leading-relaxed">
-          For more information, click below<br>to access our full sponsorship package
-        </p>
-        <a href="/assets/sponsorship-package.pdf" target="_blank"
-           class="inline-block border-2 border-green-700 text-green-700 px-6 py-2 rounded-full font-semibold hover:bg-green-100 transition">
-          Sponsorship Package
-        </a>
-        <p class="mt-6 text-green-900 text-sm font-medium leading-relaxed">
-          Information on contacting<br>specific members is included in the package
-        </p>
-      </div>
-  
-      <!-- Right Image -->
-      <div class="flex justify-center md:justify-end">
-        <img src="/assets/sponsor-page/man-screens.svg" alt="Man with Mirror" class="w-48 md:w-64 lg:w-72" />
-      </div>
-  
+<section class="bg-white pt-12 pb-16 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center text-center md:text-left gap-8">
+    <div class="flex justify-center md:justify-start">
+      <img src="/assets/sponsor-page/woman-computer.svg" alt="Woman with Books" class="w-48 md:w-64 lg:w-72" />
     </div>
-  </section>
-  
+    <div class="text-center md:col-span-1">
+      <p class="mb-6 text-green-900 text-lg font-medium leading-relaxed">
+        For more information, click below<br>to access our full sponsorship package
+      </p>
+      <a href="/assets/sponsorship-package.pdf" target="_blank" class="inline-block border-2 border-green-700 text-green-700 px-6 py-2 rounded-full font-semibold hover:bg-green-100 transition">
+        Sponsorship Package
+      </a>
+      <p class="mt-6 text-green-900 text-sm font-medium leading-relaxed">
+        Information on contacting<br>specific members is included in the package
+      </p>
+    </div>
+    <div class="flex justify-center md:justify-end">
+      <img src="/assets/sponsor-page/man-screens.svg" alt="Man with Mirror" class="w-48 md:w-64 lg:w-72" />
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer style="background-color: rgba(78, 163, 98, 1);" class="text-white w-full">
@@ -156,7 +143,7 @@
     <nav class="flex flex-col md:flex-row items-center text-sm space-y-4 md:space-y-0 md:space-x-6">
       <a href="about.html" class="hover:underline">About</a>
       <a href="program.html" class="hover:underline">Program</a>
-      <a href="index.html#register" class="hover:underline">Register</a>
+      <a href="register.html" class="hover:underline">Register</a>
       <a href="sponsors.html" class="hover:underline">Sponsors</a>
       <a href="mailto:ontarioyouthgrapevinenetwork@gmail.com" class="hover:underline">ontarioyouthgrapevinenetwork@gmail.com</a>
     </nav>

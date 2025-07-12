@@ -45,10 +45,12 @@
          class="absolute inset-0 w-full h-full object-cover"/>
     <div class="absolute inset-0 bg-black opacity-20"></div>
 
-    <!-- nav -->
+<!-- Navigation -->
 <nav style="background-color: rgba(78, 163, 98, 1);" class="relative z-10 w-full flex flex-wrap items-center justify-between px-8 py-6 text-white">
   <!-- Logo always on the first line, left side -->
-  <img src="/assets/logo.svg" alt="Grapevine Conference Logo" class="h-8"/>
+   <a href="index.html" class="w-full md:w-auto mb-2 md:mb-0 flex justify-center md:justify-start">
+    <img src="/assets/logo.svg" alt="Grapevine Logo" class="h-8">
+  </a>
 
   <!-- Menu: full-width & centered on mobile, auto-width & right-aligned on md+ -->
   <ul
@@ -77,7 +79,7 @@
         Grapevine Career Conference connects the expertise… learn what’s next for you as you transition to post-secondary.
       </p>
       <div class="flex space-x-4">
-        <a href="#register" class="bg-white text-green-600 font-semibold px-6 py-3 rounded-full shadow">
+        <a href="register.html" class="bg-white text-green-600 font-semibold px-6 py-3 rounded-full shadow">
           Register
         </a>
         <a href="#learn-more" class="border border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-green-600 transition">
@@ -150,7 +152,7 @@
 
     <!-- Button -->
     <a
-      href="#program"
+      href="program.html"
       class="inline-block mt-12 px-6 py-3 border-2 border-green-700 text-green-700 font-medium rounded-full hover:bg-green-100 transition"
     >
       View program details here
@@ -279,7 +281,7 @@
         <h3 class="text-xl font-semibold">Attendee Registration</h3>
         <p class="text-gray-700">
           Gain insights on your career path and discover critical insights on the journey ahead of you!
-        </p>
+        </p><br>
         <a
           href="attendee.html"
           class="inline-block mt-2 px-6 py-2 border-2 border-green-700 text-green-700 font-medium rounded-full hover:bg-green-100 transition"
@@ -293,7 +295,7 @@
         <h3 class="text-xl font-semibold">Sponsorship</h3>
         <p class="text-gray-700">
           Looking to give back to youth in your community? Reach out to our team to learn how you can help!
-        </p>
+        </p><br>
         <a
           href="sponsors.html"
           class="inline-block mt-2 px-6 py-2 border-2 border-green-700 text-green-700 font-medium rounded-full hover:bg-green-100 transition"
@@ -304,34 +306,22 @@
     </div>
   </div>
 </section>
-
-<!-- Wave Divider into Footer -->
-<div class="overflow-hidden">
-  <img
-    src="/assets/footer.svg"
-    alt=""
-    class="w-full block object-cover"
-  />
+  
 </div>
 
+<!-- FOOTER -->
 <footer style="background-color: rgba(78, 163, 98, 1);" class="text-white w-full">
-  <div class="w-full px-8 py-12 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-
-    <!-- Logo & Tagline -->
+  <div class="w-full px-8 py-8 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <div class="flex flex-col items-center md:items-start">
-      <img src="/assets/logo.svg" alt="Grapevine Conference Logo" class="h-10 mb-2"/>
-      <span class="uppercase text-sm">Your Tomorrow, Today</span>
+      <img src="/assets/logo.svg" alt="Grapevine Logo" class="h-10 mb-2"/>
+      <p class="uppercase text-sm">Your Tomorrow, Today</p>
     </div>
-
-    <!-- Nav & Contact -->
     <nav class="flex flex-col md:flex-row items-center text-sm space-y-4 md:space-y-0 md:space-x-6">
       <a href="about.html" class="hover:underline">About</a>
-      <a href="register.html" class="hover:underline">Register</a>
       <a href="program.html" class="hover:underline">Program</a>
+      <a href="register.html" class="hover:underline">Register</a>
       <a href="sponsors.html" class="hover:underline">Sponsors</a>
-      <a href="mailto:ontarioyouthgrapevinenetwork@gmail.com" class="hover:underline">
-        ontarioyouthgrapevinenetwork@gmail.com
-      </a>
+      <a href="mailto:ontarioyouthgrapevinenetwork@gmail.com" class="hover:underline">ontarioyouthgrapevinenetwork@gmail.com</a>
     </nav>
   </div>
 </footer>
